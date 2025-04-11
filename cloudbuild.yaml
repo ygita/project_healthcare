@@ -1,0 +1,20 @@
+steps:
+  - name: 'python'
+    entrypoint: pip
+    args: ["install", "-r", "Utils/requirements.txt"]
+
+  - name: 'python'
+    entrypoint: python
+    args:
+      - "Utils/add_dags_to_composer.py"
+      - "--dags_directory=${_DAGS_DIRECTORY}"
+      - "--dags_bucket=${_DAGS_BUCKET}"
+      - "--data_directory=${_DATA_DIRECTORY}"
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+
+substitutions:
+  _DAGS_DIRECTORY: "Workflows/"
+  _DAGS_BUCKET: "us-central1-airflow1-7fbe4a69-bucket"
+  _DATA_DIRECTORY: "Data/"
