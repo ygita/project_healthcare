@@ -1,10 +1,9 @@
 steps:
   - name: 'python'
-    entrypoint: pip
-    args: ["install", "-r", "Utils/requirements.txt"]
+    entrypoint: 'pip'
+    args: ['install', '-r', 'Utils/requirements.txt']
 
   - name: 'python'
-    entrypoint: python
     args:
       - "Utils/add_dags_to_composer.py"
       - "--dags_directory=${_DAGS_DIRECTORY}"
