@@ -1,4 +1,3 @@
---use-feature=2020-resolver
 google
 google-cloud-storage
 google-cloud-bigquery
