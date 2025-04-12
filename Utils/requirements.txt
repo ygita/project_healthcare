@@ -1,6 +1,5 @@
-google
-google-cloud-storage
-google-cloud-bigquery
-google-cloud-dataproc
-google-cloud-pubsub
-google-cloud-dataflow
+google-cloud-storage==2.14.0
+google-cloud-bigquery==3.17.2
+google-cloud-dataproc==5.12.0
+google-cloud-pubsub==2.21.1
+google-cloud-dataflow==2.15.0
